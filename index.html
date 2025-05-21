@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+v<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
@@ -9,10 +9,6 @@
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
   <style>
-    /* ... (mesmo CSS do exemplo anterior) ... */
-    
-    /* Vou incluir aqui só o CSS para dar contexto, sem repetir todo */
-
     * {
       margin: 0;
       padding: 0;
@@ -255,10 +251,13 @@
   <script>
     AOS.init();
 
-    // Botão contato com efeito
+    // Redireciona para o WhatsApp ao clicar no botão
     const btnContato = document.getElementById('btnContato');
     btnContato.addEventListener('click', () => {
-      alert('Obrigado pelo interesse! Em breve entraremos em contato.');
+      const numeroWhatsApp = '5511989775016';
+      const mensagem = encodeURIComponent('Olá! Gostaria de saber mais sobre os serviços da Contabilidade ABC.');
+      const url = `https://wa.me/${numeroWhatsApp}?text=${mensagem}`;
+      window.open(url, '_blank');
     });
   </script>
 
